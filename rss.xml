@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Aug 2021 07:18:18 GMT</lastBuildDate><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Aug 2021 10:59:41 GMT</lastBuildDate><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 345px; &quot;
     &gt;
@@ -67,4 +67,60 @@
 &lt;em&gt;Since global interpretability is difficult, we narrow down the explainability to examine what the model predicts with only one instance/example. E.g., to explain the prediction of the model, we look at one particular instance which is a house of 100 squared meters. We then simulate the predicted price changes by increase or decreasing the house size by 10 squared meters gradually. This is often more accurate than global explanations.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Local Interpretability (Group of Predictions)&lt;/strong&gt;: Why did the model make specific predictions for a group of instances? &lt;br/&gt;
 &lt;em&gt;Model predictions can be explained with a group of instances/examples. First using global method (#3) on a group of instances (subset of examples), then use local method (#4) on individual instances. Finally, aggregate the entire group for explanation.&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item></channel></rss>
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Introduction to Convolutional Operation]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/introduction-to-convolutional-operation</link><guid isPermaLink="false">https://lumen.netlify.com/posts/introduction-to-convolutional-operation</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;!-- ![Photo of AI models illustrated as Blackbox](/media/blackbox.png) --&gt;
+&lt;h2 id=&quot;edge-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#edge-detection&quot; aria-label=&quot;edge detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Edge Detection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.&lt;/li&gt;
+&lt;li&gt;Image edge detection allows us to detect vertical edges, horizontal edges.&lt;/li&gt;
+&lt;li&gt;An example of convolution operation to detect vertical edges:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 628px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVQoz21TCXKcMBDk/9/bchLjZbl1A+KUODsDjtdbSVSlGqGRelo9TZDECZIkQZpmYIwhDEMUeYH4ESOjvTiO0dQNrnHgOY7j+O8MuObgWkBVGqpWSPIEshIoZIFc5GCSwVgDt06YFod5W2jtsR/HZ4XjeNa6AKWSkEqg6zswpQnc4EEM22G4Ds77DutmsKYjoJWAdmz79s30D9AXcJDnOdIoAqN4ewtx+/XA7f2BxnZYtwN+WTE5j3508H7Gtn2CDX6kMwpTXaEfRth+wLpuCMqyBC8KcIpvBPTjnuIWkm5tj3UHFjrUth101dCs4Zy7AGVVISK9a9JZUq5QNeZ5RnA2RFAzBGeIonfcow+8hz9hbY1h8nDEahhH0rFD1bRYFtLQO9TGIokYlKkhlIGkeOaCB3WRCwGtFVj5oCiRxne0jbxkWUk327YQ50VdEUN/MbTWghMJYzTyPCVnRCSJQ5BlGQp68pngZQLGBTGNMHTVU/aTZWlaYuy+NaSmaa1hSAbOS2J7wzh2pCErUdKTmZBUKSaWKbIkRN+aS8ONutz7FbHqsGz704Mn/dM6uiM7zetV+LLNcdlgR6p78GbAfjKgPdVOyEyPbprpkgOrR7S0fgK+GPx1BF+LfT/wmjO9R1kPZI8FksDt6DGv2z9/yd/fvwH+XUmzDM5l2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ac56/vertical_edge_detection.webp 240w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/d3be9/vertical_edge_detection.webp 480w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/724e7/vertical_edge_detection.webp 628w&quot;
+              sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ff5a/vertical_edge_detection.png 240w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/e85cb/vertical_edge_detection.png 480w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png 628w&quot;
+            sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
+            alt=&quot;Vectical Edge Detection Example&quot;
+            title=&quot;Vectical Edge Detection Example&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;!-- $$
+n=7, f=3, p=2
+\\
+output = \frac{n+2p-f}s+1 \times \frac{n+2p-f}s+1 
+\\
+=\frac{7+0-3}2+1 
+\\ = \frac{4}2+1
+\\ =3
+$$ --&gt;</content:encoded></item></channel></rss>

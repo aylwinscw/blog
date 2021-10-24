@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Aug 2021 10:59:41 GMT</lastBuildDate><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Oct 2021 03:40:27 GMT</lastBuildDate><item><title><![CDATA[Dissecting ResNet Architecture]]></title><description><![CDATA[Residual blocks are skip-connection blocks that learn residual functions with reference to the layer inputs.]]></description><link>https://lumen.netlify.com/posts/dissecting-resnet-architecture</link><guid isPermaLink="false">https://lumen.netlify.com/posts/dissecting-resnet-architecture</guid><pubDate>Sun, 24 Oct 2021 10:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/a29a453ad6411405fe133e6a43bb5719/d6602/resnet_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 32.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAABZElEQVQoz12RTUvDQBCG8/9PHkT/hgc/TgoiYg9SrLRYpE3SdPOdzSZNsruNkdedkXow8DJhmHnnmVkvjmNkWYbD4YC+71ld1+HQthD7PVoXScYYrum6Hl+jgZIJrOnw//PKsgRJSsmNSimoukYahljN50iTBFmesxnVSFlD9xL+xwtkvsU0jRi/LKbvieXR5GEYmJKMc9dcOGXRDmK7ZdLNZoPaDaFthIixkyvcPZ9jubxGn+xg2grSlEj7CF7TNEzGRkXxp1gIhEHARr7vM51wuThOEZQL3Mwu8O4/QHctE1Y6R9zt4NEqRJimKRsRKcXErRq6tekEREi5KIqYMCgWuJ1dYhk+Qrt72smgsTUKncIjAqKsqoppKFIzmazXa+zdwxAh1dDQPC/gl2+4ejrDwr+HORocJwtlK7ey+F1Za82UJ51emujon05ireXcMGioIcOneEWmfJhRM2F7VKjdHX8Ak6YL5o+SaLUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/a29a453ad6411405fe133e6a43bb5719/8ac56/resnet_1.webp 240w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/d3be9/resnet_1.webp 480w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/e46b2/resnet_1.webp 960w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/f992d/resnet_1.webp 1440w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/882b9/resnet_1.webp 1920w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/a6975/resnet_1.webp 2222w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/a29a453ad6411405fe133e6a43bb5719/8ff5a/resnet_1.png 240w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/e85cb/resnet_1.png 480w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/d9199/resnet_1.png 960w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/07a9c/resnet_1.png 1440w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/29114/resnet_1.png 1920w,
+/blog/static/a29a453ad6411405fe133e6a43bb5719/d6602/resnet_1.png 2222w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/a29a453ad6411405fe133e6a43bb5719/d9199/resnet_1.png&quot;
+            alt=&quot;Overview of ResNet&quot;
+            title=&quot;Overview of ResNet&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;what-does-resnet-50-mean&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-does-resnet-50-mean&quot; aria-label=&quot;what does resnet 50 mean permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What does ResNet-50 mean?&lt;/h3&gt;
+&lt;p&gt;A convolutional neural network that is 50 layers deep.&lt;/p&gt;
+&lt;h3 id=&quot;what-are-residual-blocks&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-are-residual-blocks&quot; aria-label=&quot;what are residual blocks permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What are residual blocks?&lt;/h3&gt;
+&lt;p&gt;Residual blocks are skip-connection blocks that learn residual functions with reference to the layer inputs. Each residual block contains 3 layers. There are 16 (3+4+6+3) residual blocks in ResNet-50 architectures.&lt;/p&gt;
+&lt;h3 id=&quot;what-is-the-purpose-of-1x1-convolutions&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-the-purpose-of-1x1-convolutions&quot; aria-label=&quot;what is the purpose of 1x1 convolutions permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is the purpose of 1x1 convolutions?&lt;/h3&gt;
+&lt;p&gt;1x1 convolutions are used to shrink down the representation significantly without hurting the performance.&lt;/p&gt;
+&lt;h3 id=&quot;where-is-batch-normalization-bn-used&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#where-is-batch-normalization-bn-used&quot; aria-label=&quot;where is batch normalization bn used permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Where is Batch Normalization (BN) used?&lt;/h3&gt;
+&lt;p&gt;BN is used right after each convolution and before activation.&lt;/p&gt;
+&lt;h3 id=&quot;what-is-the-bottleneck-architecture&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-the-bottleneck-architecture&quot; aria-label=&quot;what is the bottleneck architecture permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is the bottleneck architecture?&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 500px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/23e791aed4910863fb33ee763eb16535/0b533/resnet_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABCklEQVQoz1VR2Y6DMBDr/38Y78tueQCKhEClWnFsCoQzuONsidKRQoYZx/YkF0gc24ZjmaGfCnmaQNU1JsmN1G3/OPjBwXxdsekR+e2Ge55D909sHu7CZBhHtF2H8PsH98cD3Z+CnmcMw+DAjE3I6qZBkqb4CkP8irCeJoxyXmttMZZwkmLf9yiKwq5JmlQzZrekjlDIlVJIkwRBEKBtWydI3L7vb4fy04hyFEWoqsqSG2Ps8glXcViWJa7XqyWkOGsMunSEs4xHy1mWWVWSnK79kXmAvUQcUpxuiWPNjWwv/B25XDJVl2WxImeP+7nOieI4tiTEUejjUU4wG76Ae2Ev/79b8+Hc770A54kdkeWJANcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/23e791aed4910863fb33ee763eb16535/8ac56/resnet_2.webp 240w,
+/blog/static/23e791aed4910863fb33ee763eb16535/d3be9/resnet_2.webp 480w,
+/blog/static/23e791aed4910863fb33ee763eb16535/b0a15/resnet_2.webp 500w&quot;
+              sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/23e791aed4910863fb33ee763eb16535/8ff5a/resnet_2.png 240w,
+/blog/static/23e791aed4910863fb33ee763eb16535/e85cb/resnet_2.png 480w,
+/blog/static/23e791aed4910863fb33ee763eb16535/0b533/resnet_2.png 500w&quot;
+            sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/23e791aed4910863fb33ee763eb16535/0b533/resnet_2.png&quot;
+            alt=&quot;With and without bottleneck architecture comparison&quot;
+            title=&quot;With and without bottleneck architecture comparison&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;According to the ResNet paper (pg. 6), The three layers are 1×1, 3×3, and 1×1 convolutions, where the 1×1 layers are responsible for reducing and then increasing restoring dimensions, leaving the 3×3 layer a bottleneck with smaller input output dimension. Both designs share the same time complexity.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 345px; &quot;
     &gt;
@@ -67,7 +164,7 @@
 &lt;em&gt;Since global interpretability is difficult, we narrow down the explainability to examine what the model predicts with only one instance/example. E.g., to explain the prediction of the model, we look at one particular instance which is a house of 100 squared meters. We then simulate the predicted price changes by increase or decreasing the house size by 10 squared meters gradually. This is often more accurate than global explanations.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Local Interpretability (Group of Predictions)&lt;/strong&gt;: Why did the model make specific predictions for a group of instances? &lt;br/&gt;
 &lt;em&gt;Model predictions can be explained with a group of instances/examples. First using global method (#3) on a group of instances (subset of examples), then use local method (#4) on individual instances. Finally, aggregate the entire group for explanation.&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Introduction to Convolutional Operation]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/introduction-to-convolutional-operation</link><guid isPermaLink="false">https://lumen.netlify.com/posts/introduction-to-convolutional-operation</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;!-- ![Photo of AI models illustrated as Blackbox](/media/blackbox.png) --&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Introduction to Convolutional Operation]]></title><description><![CDATA[The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.]]></description><link>https://lumen.netlify.com/posts/introduction-to-convolutional-operation</link><guid isPermaLink="false">https://lumen.netlify.com/posts/introduction-to-convolutional-operation</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;!-- ![Photo of AI models illustrated as Blackbox](/media/blackbox.png) --&gt;
 &lt;h2 id=&quot;edge-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#edge-detection&quot; aria-label=&quot;edge detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Edge Detection&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.&lt;/li&gt;

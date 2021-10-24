@@ -21,9 +21,9 @@
   Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js
   Cache-Control: public, max-age=31536000, immutable
-/component---src-templates-post-template-js-381c1b847824134fa4bd.js
-  Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-page-template-js-d8aeb4e67f2e8af3e6cd.js
+  Cache-Control: public, max-age=31536000, immutable
+/component---src-templates-post-template-js-381c1b847824134fa4bd.js
   Cache-Control: public, max-age=31536000, immutable
 /component---src-templates-tag-template-js-6f77d5f667fd901ff51f.js
   Cache-Control: public, max-age=31536000, immutable
@@ -93,42 +93,6 @@
   Link: </blog/component---src-templates-categories-list-template-js-2181ec47d28e5c35d3e9.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/categories/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/posts/what-is-machine-learning-interpretability
-  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
-  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
-  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
-  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
-  Link: </blog/component---src-templates-post-template-js-381c1b847824134fa4bd.js>; rel=preload; as=script
-  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/posts/what-is-machine-learning-interpretability/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/pages/about/
-  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
-  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
-  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
-  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
-  Link: </blog/component---src-templates-page-template-js-d8aeb4e67f2e8af3e6cd.js>; rel=preload; as=script
-  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/pages/about/page-data.json>; rel=preload; as=fetch; crossorigin
-/blog/posts/introduction-to-convolutional-operation
-  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
-  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
-  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
-  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
-  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
-  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
-  Link: </blog/component---src-templates-post-template-js-381c1b847824134fa4bd.js>; rel=preload; as=script
-  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
-  Link: </blog/page-data/posts/introduction-to-convolutional-operation/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/pages/contacts/
   Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
   Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
@@ -141,6 +105,54 @@
   Link: </blog/component---src-templates-page-template-js-d8aeb4e67f2e8af3e6cd.js>; rel=preload; as=script
   Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
   Link: </blog/page-data/pages/contacts/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/pages/about/
+  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
+  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
+  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
+  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
+  Link: </blog/component---src-templates-page-template-js-d8aeb4e67f2e8af3e6cd.js>; rel=preload; as=script
+  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/pages/about/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/posts/what-is-machine-learning-interpretability
+  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
+  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
+  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
+  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
+  Link: </blog/component---src-templates-post-template-js-381c1b847824134fa4bd.js>; rel=preload; as=script
+  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/posts/what-is-machine-learning-interpretability/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/posts/dissecting-resnet-architecture
+  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
+  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
+  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
+  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
+  Link: </blog/component---src-templates-post-template-js-381c1b847824134fa4bd.js>; rel=preload; as=script
+  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/posts/dissecting-resnet-architecture/page-data.json>; rel=preload; as=fetch; crossorigin
+/blog/posts/introduction-to-convolutional-operation
+  Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/framework-b2f816f437730bdc94bf.js>; rel=preload; as=script
+  Link: </blog/532a2f07-92db97c0addf07d5cb73.js>; rel=preload; as=script
+  Link: </blog/dc6a8720040df98778fe970bf6c000a41750d3ae-5c1e759662f337becda4.js>; rel=preload; as=script
+  Link: </blog/app-685252f56933ac7a8fc6.js>; rel=preload; as=script
+  Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script
+  Link: </blog/cd95ea5cbd2c605f26db819f07999610c9ff4310-babf0c2595a064681f8b.js>; rel=preload; as=script
+  Link: </blog/component---src-templates-post-template-js-381c1b847824134fa4bd.js>; rel=preload; as=script
+  Link: </blog/page-data/app-data.json>; rel=preload; as=fetch; crossorigin
+  Link: </blog/page-data/posts/introduction-to-convolutional-operation/page-data.json>; rel=preload; as=fetch; crossorigin
 /blog/tag/deep-learning
   Link: </blog/webpack-runtime-9c609f6e5334cf141391.js>; rel=preload; as=script
   Link: </blog/styles-407fe62976dc5310c43e.js>; rel=preload; as=script

@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 24 Oct 2021 03:49:50 GMT</lastBuildDate><item><title><![CDATA[Dissecting ResNet Architecture]]></title><description><![CDATA[Residual blocks are skip-connection blocks that learn residual functions with reference to the layer inputs.]]></description><link>https://lumen.netlify.com/posts/dissecting-resnet-architecture</link><guid isPermaLink="false">https://lumen.netlify.com/posts/dissecting-resnet-architecture</guid><pubDate>Sun, 24 Oct 2021 10:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Aylwin Sim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://lumen.netlify.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 25 Oct 2021 03:24:14 GMT</lastBuildDate><item><title><![CDATA[Calculating parameters and computational cost in one convolutional layer]]></title><description><![CDATA[Residual blocks are skip-connection blocks that learn residual functions with reference to the layer inputs.]]></description><link>https://lumen.netlify.com/posts/calculating-parameters-and-computational-cost-in-one-convolutional-layer</link><guid isPermaLink="false">https://lumen.netlify.com/posts/calculating-parameters-and-computational-cost-in-one-convolutional-layer</guid><pubDate>Mon, 25 Oct 2021 10:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/58354/conv_1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3UlEQVQoz3VTy2oUQRStnR/hNwR/QxDcuRL8AXciLsSVO8lKFMWtG0VQEERUMAyBGJIRGUxmmMXEEUI0A1r9qKp+1HT1sU61PXTG9sKl63Hq3nPPvS2iKEIcx3DOoSxyaK1Aq+s6eLtWSiGKJMqyXJ3RqqpCkiQhRlEUEJUHVNYSAecBtkKvLZdLWI9j4q5xz0B0BhcpaujKhsuT4QN8fX4ZxijP1ARW0+kUw+EwPFBKo8gMdg+P8OjNHlKd/ZNYbF66iJvXruLbqcRi5zZm768jyy3yPEeWZZjP5xiPx6FUYzJYL8vB0QmeDQ6g/J6lv9ub4OPnaRPwhTiHuxc2cHh8jFLO8HP8Cq5arjJqrYNGXU2L0kImKkhgshz3Xu7iydt9Kguxc+MWth8/hPHY2esr+HT/PCIvcOyDsGGj0QiDwcCzNZAyglEJPuxPcOfpFqJUhwQySUPgwLBbv/k1QR5//9tFF0SW0kuxWATxg/uz098pvsx+oLT2jH6sQJTUyphmBDzLwrpVaetdpqZ1zwQ0+jYxBIH0Zqa4tr1jQ3Ytjgmdq8/MYnsnunTXGTEzv8zOrtP5uIvvvgslr/8R7ZrdZVPo1JAzSW8H+3/vxHpp7QXZkRGDMHgfps/+AMnmlIK7QHtvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/8ac56/conv_1.webp 240w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/d3be9/conv_1.webp 480w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/e46b2/conv_1.webp 960w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/29105/conv_1.webp 1396w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/8ff5a/conv_1.png 240w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/e85cb/conv_1.png 480w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/d9199/conv_1.png 960w,
+/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/58354/conv_1.png 1396w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/984e440f9b2f8c324b8c0df0b918c2a1/d9199/conv_1.png&quot;
+            alt=&quot;Overview of Convolutional Operation&quot;
+            title=&quot;Overview of Convolutional Operation&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;how-many-parameters&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#how-many-parameters&quot; aria-label=&quot;how many parameters permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;How many parameters?&lt;/h3&gt;
+&lt;p&gt;Suppose we have 2 filters that are 3x3x3 in one layer of the neural network. How many parameters does the layer have?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Convolution operation has the advantage of fixing the number of parameters regardless of the size of the input image.&lt;/li&gt;
+&lt;li&gt;The number of filters decide the depth of the output dimension. For example, we can have 10 filters to detect specific colour, vertical edge, horizontal edge etc.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The number of learnable parameters are:&lt;/p&gt;
+&lt;p&gt;= The number of filter weights + bias&lt;/p&gt;
+&lt;p&gt;= (filter width x filter height x filter depth x # filters) + (number of filters)&lt;/p&gt;
+&lt;p&gt;= (3x3x3x2) + (2)&lt;/p&gt;
+&lt;p&gt;= 56 (learnable parameters)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;what-is-the-computational-cost-in-this-layer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-the-computational-cost-in-this-layer&quot; aria-label=&quot;what is the computational cost in this layer permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is the computational cost in this layer?&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/caca24524ae0fa058c08d3e15652b071/7161f/conv_2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABWklEQVQoz42SXUsCQRSG52921w8Iuq8uhAhvi67Cm4i6W4JECkx0UwjSsA8SXailFTXFaDXbj3Zm9m3c1mW0VTuwDLPvOc+cL4LQfN/HPFukzRqRA2zbRrNpoNVqodNpwzAM9Hq9CDr+OKfgzIPPeexjU0AunBzHgWVZsMXpui4YY5EmPGcy5/EZhuofkVEvgFNKgzsV8VpFQeNqF2b7IRZK5HLGZtkOKvdPSGdVnOcK0PUXaFodtYaOdjWFmyRBYZNAy239AjmNz5CFPUmX7rC+f4q1PQXHl7fBP89zYX0D9fQqqjsEaoLgtXzwP6BSfERCqWDjSEUqcy31D3irKXjOrEAvJaPexg5FBp4Vq9g+ySNxeIFsuRYC/aBX41C+ZJ3ItCjWQpyfoy+Yg6Eoh0krE6Dh2CMMBx/LM4Q0mPd+H91uNypVHpppmsGeTiY/FzgRZh3k+yJtYj/GU0oSs0fQXgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/caca24524ae0fa058c08d3e15652b071/8ac56/conv_2.webp 240w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/d3be9/conv_2.webp 480w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/e46b2/conv_2.webp 960w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/575d1/conv_2.webp 1182w&quot;
+              sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/caca24524ae0fa058c08d3e15652b071/8ff5a/conv_2.png 240w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/e85cb/conv_2.png 480w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/d9199/conv_2.png 960w,
+/blog/static/caca24524ae0fa058c08d3e15652b071/7161f/conv_2.png 1182w&quot;
+            sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/caca24524ae0fa058c08d3e15652b071/d9199/conv_2.png&quot;
+            alt=&quot;Calculating Computational Cost based on Output Activation&quot;
+            title=&quot;Calculating Computational Cost based on Output Activation&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The output dimension is 4x4x2&lt;/li&gt;
+&lt;li&gt;For every output pixel, we have to compute 3x3x3 operations.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Computational cost:&lt;/p&gt;
+&lt;p&gt;= (# Filter params) x (# filter positions) x (# of filters)&lt;/p&gt;
+&lt;p&gt;= (3x3x3) x (4x4) x (2)&lt;/p&gt;
+&lt;p&gt;= 864 (operations)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Dissecting ResNet Architecture]]></title><description><![CDATA[Residual blocks are skip-connection blocks that learn residual functions with reference to the layer inputs.]]></description><link>https://lumen.netlify.com/posts/dissecting-resnet-architecture</link><guid isPermaLink="false">https://lumen.netlify.com/posts/dissecting-resnet-architecture</guid><pubDate>Sun, 24 Oct 2021 10:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
@@ -95,7 +204,63 @@
         &lt;/picture&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;According to the ResNet paper (pg. 6), The three layers are 1×1, 3×3, and 1×1 convolutions, where the 1×1 layers are responsible for reducing and then increasing restoring dimensions, leaving the 3×3 layer a bottleneck with smaller input output dimension. Both designs share the same time complexity.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;p&gt;According to the ResNet paper (pg. 6), The three layers are 1×1, 3×3, and 1×1 convolutions, where the 1×1 layers are responsible for reducing and then increasing restoring dimensions, leaving the 3×3 layer a bottleneck with smaller input output dimension. Both designs share the same time complexity.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Introduction to Convolutional Operation]]></title><description><![CDATA[The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.]]></description><link>https://lumen.netlify.com/posts/introduction-to-convolutional-operation</link><guid isPermaLink="false">https://lumen.netlify.com/posts/introduction-to-convolutional-operation</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;!-- ![Photo of AI models illustrated as Blackbox](/media/blackbox.png) --&gt;
+&lt;h2 id=&quot;edge-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#edge-detection&quot; aria-label=&quot;edge detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Edge Detection&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.&lt;/li&gt;
+&lt;li&gt;Image edge detection allows us to detect vertical edges, horizontal edges.&lt;/li&gt;
+&lt;li&gt;An example of convolution operation to detect vertical edges:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 628px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVQoz21TCXKcMBDk/9/bchLjZbl1A+KUODsDjtdbSVSlGqGRelo9TZDECZIkQZpmYIwhDEMUeYH4ESOjvTiO0dQNrnHgOY7j+O8MuObgWkBVGqpWSPIEshIoZIFc5GCSwVgDt06YFod5W2jtsR/HZ4XjeNa6AKWSkEqg6zswpQnc4EEM22G4Ds77DutmsKYjoJWAdmz79s30D9AXcJDnOdIoAqN4ewtx+/XA7f2BxnZYtwN+WTE5j3508H7Gtn2CDX6kMwpTXaEfRth+wLpuCMqyBC8KcIpvBPTjnuIWkm5tj3UHFjrUth101dCs4Zy7AGVVISK9a9JZUq5QNeZ5RnA2RFAzBGeIonfcow+8hz9hbY1h8nDEahhH0rFD1bRYFtLQO9TGIokYlKkhlIGkeOaCB3WRCwGtFVj5oCiRxne0jbxkWUk327YQ50VdEUN/MbTWghMJYzTyPCVnRCSJQ5BlGQp68pngZQLGBTGNMHTVU/aTZWlaYuy+NaSmaa1hSAbOS2J7wzh2pCErUdKTmZBUKSaWKbIkRN+aS8ONutz7FbHqsGz704Mn/dM6uiM7zetV+LLNcdlgR6p78GbAfjKgPdVOyEyPbprpkgOrR7S0fgK+GPx1BF+LfT/wmjO9R1kPZI8FksDt6DGv2z9/yd/fvwH+XUmzDM5l2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+          &lt;source
+              srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ac56/vertical_edge_detection.webp 240w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/d3be9/vertical_edge_detection.webp 480w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/724e7/vertical_edge_detection.webp 628w&quot;
+              sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+              type=&quot;image/webp&quot;
+            /&gt;
+          &lt;source
+            srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ff5a/vertical_edge_detection.png 240w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/e85cb/vertical_edge_detection.png 480w,
+/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png 628w&quot;
+            sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
+            type=&quot;image/png&quot;
+          /&gt;
+          &lt;img
+            class=&quot;gatsby-resp-image-image&quot;
+            src=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
+            alt=&quot;Vectical Edge Detection Example&quot;
+            title=&quot;Vectical Edge Detection Example&quot;
+            loading=&quot;lazy&quot;
+            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+          /&gt;
+        &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;!-- $$
+n=7, f=3, p=2
+\\
+output = \frac{n+2p-f}s+1 \times \frac{n+2p-f}s+1 
+\\
+=\frac{7+0-3}2+1 
+\\ = \frac{4}2+1
+\\ =3
+$$ --&gt;</content:encoded></item><item><title><![CDATA[What is Machine Learning Interpretability]]></title><description><![CDATA[Interpretability is the degree to which a human can understand the cause of a decision. -Tom Miller]]></description><link>https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</link><guid isPermaLink="false">https://lumen.netlify.com/posts/what-is-machine-learning-interpretability</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 345px; &quot;
     &gt;
@@ -164,60 +329,4 @@
 &lt;em&gt;Since global interpretability is difficult, we narrow down the explainability to examine what the model predicts with only one instance/example. E.g., to explain the prediction of the model, we look at one particular instance which is a house of 100 squared meters. We then simulate the predicted price changes by increase or decreasing the house size by 10 squared meters gradually. This is often more accurate than global explanations.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Local Interpretability (Group of Predictions)&lt;/strong&gt;: Why did the model make specific predictions for a group of instances? &lt;br/&gt;
 &lt;em&gt;Model predictions can be explained with a group of instances/examples. First using global method (#3) on a group of instances (subset of examples), then use local method (#4) on individual instances. Finally, aggregate the entire group for explanation.&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Introduction to Convolutional Operation]]></title><description><![CDATA[The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.]]></description><link>https://lumen.netlify.com/posts/introduction-to-convolutional-operation</link><guid isPermaLink="false">https://lumen.netlify.com/posts/introduction-to-convolutional-operation</guid><pubDate>Sun, 08 Aug 2021 08:46:37 GMT</pubDate><content:encoded>&lt;!-- ![Photo of AI models illustrated as Blackbox](/media/blackbox.png) --&gt;
-&lt;h2 id=&quot;edge-detection&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#edge-detection&quot; aria-label=&quot;edge detection permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Edge Detection&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The convolution operation is the fundamental block of a CNN. One of the examples is the image edge detection.&lt;/li&gt;
-&lt;li&gt;Image edge detection allows us to detect vertical edges, horizontal edges.&lt;/li&gt;
-&lt;li&gt;An example of convolution operation to detect vertical edges:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 628px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9klEQVQoz21TCXKcMBDk/9/bchLjZbl1A+KUODsDjtdbSVSlGqGRelo9TZDECZIkQZpmYIwhDEMUeYH4ESOjvTiO0dQNrnHgOY7j+O8MuObgWkBVGqpWSPIEshIoZIFc5GCSwVgDt06YFod5W2jtsR/HZ4XjeNa6AKWSkEqg6zswpQnc4EEM22G4Ds77DutmsKYjoJWAdmz79s30D9AXcJDnOdIoAqN4ewtx+/XA7f2BxnZYtwN+WTE5j3508H7Gtn2CDX6kMwpTXaEfRth+wLpuCMqyBC8KcIpvBPTjnuIWkm5tj3UHFjrUth101dCs4Zy7AGVVISK9a9JZUq5QNeZ5RnA2RFAzBGeIonfcow+8hz9hbY1h8nDEahhH0rFD1bRYFtLQO9TGIokYlKkhlIGkeOaCB3WRCwGtFVj5oCiRxne0jbxkWUk327YQ50VdEUN/MbTWghMJYzTyPCVnRCSJQ5BlGQp68pngZQLGBTGNMHTVU/aTZWlaYuy+NaSmaa1hSAbOS2J7wzh2pCErUdKTmZBUKSaWKbIkRN+aS8ONutz7FbHqsGz704Mn/dM6uiM7zetV+LLNcdlgR6p78GbAfjKgPdVOyEyPbprpkgOrR7S0fgK+GPx1BF+LfT/wmjO9R1kPZI8FksDt6DGv2z9/yd/fvwH+XUmzDM5l2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-          &lt;source
-              srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ac56/vertical_edge_detection.webp 240w,
-/blog/static/77249055b2d14e8d6f52ff5fe217e723/d3be9/vertical_edge_detection.webp 480w,
-/blog/static/77249055b2d14e8d6f52ff5fe217e723/724e7/vertical_edge_detection.webp 628w&quot;
-              sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
-              type=&quot;image/webp&quot;
-            /&gt;
-          &lt;source
-            srcset=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/8ff5a/vertical_edge_detection.png 240w,
-/blog/static/77249055b2d14e8d6f52ff5fe217e723/e85cb/vertical_edge_detection.png 480w,
-/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png 628w&quot;
-            sizes=&quot;(max-width: 628px) 100vw, 628px&quot;
-            type=&quot;image/png&quot;
-          /&gt;
-          &lt;img
-            class=&quot;gatsby-resp-image-image&quot;
-            src=&quot;/blog/static/77249055b2d14e8d6f52ff5fe217e723/3d84d/vertical_edge_detection.png&quot;
-            alt=&quot;Vectical Edge Detection Example&quot;
-            title=&quot;Vectical Edge Detection Example&quot;
-            loading=&quot;lazy&quot;
-            style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-          /&gt;
-        &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;!-- $$
-n=7, f=3, p=2
-\\
-output = \frac{n+2p-f}s+1 \times \frac{n+2p-f}s+1 
-\\
-=\frac{7+0-3}2+1 
-\\ = \frac{4}2+1
-\\ =3
-$$ --&gt;</content:encoded></item></channel></rss>
+&lt;/ol&gt;</content:encoded></item></channel></rss>
